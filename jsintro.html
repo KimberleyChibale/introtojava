@@ -13,9 +13,51 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+        <p id ="oct"></p>
+        <p id ="nov"></p>
+        <!-- the first script calls the js extension to execute -->
+        <button type="button" id="myButton">Click Here</button>
+        <script src=./external.js></script>
+        <br><br>
+        <!-- the embedded script below triggers the message -->
         <script>
-            var greet = "Hello Explorer Academy";
+            document.getElementById("oct").innerHTML = "We did it"
+            var greet = "Hello Explorer Academy!";
             document.write(greet);
         </script>
+        <br><br>
+        <!-- below is an example of inline js code -->
+        <button onclick="alert('Inline Javascript')">Click Me</button>
+        <br><br>
+        <script>
+            var x = 5;
+            var y = 4;
+            var sum = x + y;
+            document.write(sum);
+            document.getElementById("nov").innerHTML = greet;
+        </script>
+        <br><br>
+        <!-- declaring a variable and assigning a value later -->
+        <script>
+            var firstName;
+            firstName = "Kimberley";
+            document.write(firstName);
+            console.log("Hello World")
+        </script>
+        <br><br>
+        <!-- declaring multiple variables at once -->
+        <script>
+            var surname="Chibale", age =23, isMale = false;
+            document.write(isMale);
+            alert("Welcome to Explorer   ")
+        </script>
+        <!-- creating an infinity number datatype -->
+        <script>
+            alert(9/0);
+            alert(-9/0);
+            alert(16/-0)
+            alert(0/0);
+        </script>
+
     </body>
 </html>
