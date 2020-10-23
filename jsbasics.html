@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jsbasics</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            function sayHello(name){
+                return "Hello there " + name;
+            }
+            function greet(greetingFunction, givenName){
+                return greetingFunction(givenName)
+            }
+            var expectedResult = greet(sayHello, "Kim");
+            alert(expectedResult);
+        </script>
+        <script>
+            // an array
+            var colors = ["Yellow", "Blue", "Green"];
+            var cities = ["Paris", "London", "New York", "Lusaka"]
+            console.log(colors[2]);
+            // console.log(cities[0])
+        </script>
+        <script>
+            
+            var x = 24;
+            var y = 6;
+            // arithemic operators
+            alert(x + y);
+            alert(x - y);
+            alert(x * y);
+            alert(x / y);
+            alert(x % y);
+
+        </script>
+        <script>
+            var x;
+            x = 23;
+
+            // assignment operators
+            x += 10;
+            alert(x);
+
+            x -= 5;
+            alert(x);
+
+            x *= 3;
+            alert(x);
+
+            x /= 2;
+            alert(x);
+
+            x %= 2;
+            alert(x);
+        </script>
+        <script>
+            // concatenation
+            var x ="Explorer";
+            var y ="Academy";
+            alert(x + y);
+
+            x += y;
+            alert(x);
+        </script>
+        <script>
+            var x = 3;
+
+            alert(++x);
+            alert(x);
+
+            x = 3;
+
+            alert(x++);
+            alert(x);
+
+            x = 3;
+
+            alert(--x);
+            alert(x);
+
+            x = 3;
+
+            alert(x--);
+            alert(x); 
+        </script>
+        <script>
+            var x = 2016;
+
+            // divisible by 4 and not 100
+            // logical operators
+            if((x % 400 == 0) || ((x % 100 != 0) && (x % 4 == 0))){
+                alert(x + " is a leap year");
+            } else {
+                alert(x + " is not a leap year");
+            }
+        </script>
+        <script>
+            var x = 20;
+            var y = 25;
+            var z = "20";
+            // comparison operators
+            alert(x == z); 
+            alert(x === z); 
+            alert(x != y); 
+            alert(x !== z); 
+            alert(x < y); 
+            alert(x > y); 
+            alert(x <= y); 
+            alert(x >= y); 
+        </script>
+
+    </body>
+</html>
