@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>String operations</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="colors.css">
+    </head>
+    <body>
+        <script>
+            var x = "he said, 'come here'";
+            var y = 'he said, "come here"';
+            // "come here" is displayed in quotes on the console due to the backward slashes
+            // backward slashes and quotes are known as escape sequences
+            var z = "he said, \"come here\"";
+            var y ='it\'s fine';
+            console.log(z);
+            console.log(y);
+        </script>
+        <script>
+            // \n creates a new line
+            var x = "this dog \n wants a bone";
+            document.write("<pre>" + x + "</pre>"); 
+
+            // \\ adds a single backward slash in the web page output
+            var y = "C:\\Users\\Public\\Downloads";
+            document.write(y);  
+        </script>
+        <br><br>
+        <script>
+            // this counts the number of characters in the string
+            var z = "What goes around, comes back around";
+            document.write(z.length)
+        </script>
+        <br><br>
+        <script>
+            // finding a string inside another string
+            var a = "This little dog wants a bone because dogs eat bones"
+            var myIndex = a.indexOf("dog");
+            document.write(myIndex);
+        </script>
+        <br><br>
+        <script>
+            // finding a string inside another string - lastIndexOf
+            var b = "This dog wants a bone because dogs eat bones"
+            var myIndex2 = b.lastIndexOf("dog");
+            document.write(myIndex2);
+        </script>
+        <br><br>
+        <script>
+            // finding a string inside another string from index position given
+            var d = "This little dog wants a bone because dogs eat bones"
+            var myIndex = d.indexOf("dog", 13);
+            document.write(myIndex);
+        </script>
+        <br><br>
+        <script>
+            // finding a string inside another string from index position given - lastIndexOf
+            var e = "This dog wants a bone because dogs eat bones"
+            var myIndex2 = e.lastIndexOf("dog", 31);
+            document.write(myIndex2);
+        </script>
+        <br><br>
+        <script>
+            // using search method to find a string inside another string - it is case sensitive
+            var e = "This Dog and many other dogs want bones because dogs eat bones"
+            var mySearch = e.search("dog");
+            document.write(mySearch);
+        </script>
+        <br><br>
+        <script>
+            // using slice to extract a substring
+            var x = "This Dog and many other dogs want bones because dogs eat bones"
+            var myString = x.slice(5);
+            document.write(myString);
+        </script>
+        <br><br>
+        <script>
+            // using slice to extract a substring with negative values
+            var x = "This Dog and many other dogs want bones because dogs eat bones"
+            // the string length is negative 10 and output is now "eat bones" (ie 30-10=20 start index position)
+            var myString = x.slice(-10);
+            document.write(myString);
+        </script>
+
+    </body>
+</html>
