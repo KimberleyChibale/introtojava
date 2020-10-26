@@ -9,6 +9,19 @@
         <link rel="stylesheet" href="colors.css">
     </head>
     <body>
+        <!-- onresize event handler -->
+        <!-- width and height changes shown under inspect when page is loaded -->
+        <p id="result"></p>
+        <script>
+            function displaySize(){
+                var w = window.outerWidth;
+                var h = window.outerHeight;
+                var txt = "Window size: width = " + w + ", height = " + h;
+
+                document.getElementById("result").innerHTML = txt
+            }
+            window.onresize = displaySize;
+        </script>
         <!-- onclick event handler on an element-->
         <button type="button" onclick="alert('Thank you for your submission')">Click here</button>
         <!-- event handler using a function -->
@@ -72,5 +85,6 @@
                 <input type="submit" value="submit">
             </form>
         </div>
+
     </body>
 </html>  
