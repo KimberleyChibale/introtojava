@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>event handlers</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="colors.css">
+    </head>
+    <body>
+        <!-- onclick event handler on an element-->
+        <button type="button" onclick="alert('Thank you for your submission')">Click here</button>
+        <!-- event handler using a function -->
+        <button type="button" id="bigBtn">Submit</button>
+        <script>
+            function displayName(){
+                alert('Hello Kim');
+            }
+            document.getElementById('bigBtn').onclick =displayName;
+        </script>
+        <!-- onclick event hander on links -->
+        <a href="#" onclick="alert('Link has been clicked')">Our Link</a>
+        <!-- oncontextmenu event handler -->
+        <button type="button" oncontextmenu="alert('Thank you for your submission')">Right click</button>
+        <!-- onmouseover event handler -->
+        <button type="button" onmouseover="alert('place mouse over')">Mouse over</button>
+        <a href="#" onclick="alert('mouse over')">Mouse over</a>
+        <!-- mouseout event handler -->
+        <!-- <div class="upper" onmouseout="alert('section one')"></div>
+        <div class="middle" onmouseout="alert('section two')"></div> -->
+        <br><br>
+        <!-- onkeydown eventhandler -->
+        <input type="text" onkeydown="alert('Key has been pressed')">
+        <textarea onkeydown="alert('Key has been pressed in text area')"></textarea>
+        <br><br>
+        <!-- onkeyup eventhandler -->
+        <input type="text" onkeyup="alert('Key has been released')">
+        <textarea onkeyup="alert('Key has been released in text area')"></textarea>
+        <br><br>
+        <!-- onkeypress event handler -->
+        <input type="text" onkeypress="alert('Key has been pressed')">
+        <textarea onkeypress="alert('Key has been pressed in text area')"></textarea>
+        <br><br>
+        <!-- onfocus event handler -->
+        <script>
+            function highlightinput(elm){
+                elm.style.background = "red";
+            }
+        </script>
+        <!-- onfocus event handler -->
+        <div>
+            <input type="text" onfocus="highlightinput(this)">
+            <button type="button">Click Here!</button>
+        </div>
+        <!-- onblur event handler -->
+        <div>
+            <input type="text" onblur="alert('Element has lost focus')">
+            <button type="button">Submit!</button>
+        </div>
+        <!-- onchange event handler -->
+        <select name="" id="" onchange="alert('Selection changed')">
+            <option>Select</option>
+            <option>Female</option>
+            <option>Male</option>
+        </select>
+        <!-- onsubmit event handler -->
+        <div>
+            <form action="" method="post" onsubmit="alert('Data has been stored')">
+                <label>First Name</label>
+                <input type="text" name="firstname" id="" required>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </body>
+</html>  
