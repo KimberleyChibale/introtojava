@@ -88,6 +88,118 @@
             var myString = x.slice(-10);
             document.write(myString);
         </script>
+        <br><br>
+        <script>
+            // using the substring()method 
+            var x = "This Dog and many other dogs want bones because dogs eat bones"
+            // uses the start and end indexes
+            var subString = x.substring(10, 8);
+            document.write(subString);
+        </script>
+        <br><br>
+        <script>
+            // using the substr()method 
+            var x = "This Dog and many other dogs want bones because dogs eat bones"
+            // extracts a fixed number of characters from a string from the start index indicated
+            var subStr = x.substr(5, 10);
+            document.write(subStr);
+        </script>
+        <br><br>
+        <script>
+            // using the replace()method 
+            var x = "This dog and many other dogs want bones because dogs eat bones"
+            // replaces a substring or regular expression with a new substring
+            // only replaces the first match it finds
+            var subReplace = x.replace("dogs", "cat");
+            document.write(subReplace);
+        </script>
+        <br><br>
+        <script>
+            // using the replace()method - case-insensitive
+            var x = "This Dog and many other dogs want bones because dogs eat bones"
+            // replaces a substring or regular expression with a new substring
+            // use of regular expression to make it case insensitive
+            var subReplace = x.replace(/dog/i, "cat");
+            document.write(subReplace);
+        </script>
+        <br><br>
+        <script>
+            // using the replace()method - case-insensitivity and global change
+            var x = "This Dog and many other dogs want bones because dogs eat bones"
+            // use of i and g modifiers to make it case insensitive and change all occurences of the substring
+            var subReplace = x.replace(/dog/ig, "cat");
+            document.write(subReplace);
+        </script>
+        <br><br>
+        <script>
+             // using the toUpperCase()method - capitalizes the entire string
+             var x = "This Dog and many other dogs want bones because dogs eat bones"
+             var result = x.toUpperCase();
+             document.write(result);
+        </script>
+        <br><br>
+        <script>
+             // using the toLowerCase()method 
+             var x = "This Dog and many other dogs want bones because dogs eat bones"
+             var result = x.toLowerCase();
+             document.write(result);
+        </script>
+        <br><br>
+        <script>
+            // concatenation using assignment operators
+            var x = "this Dog";
+            var y = " of mine";
+            var result = x + " " + y;
+            x += " of yours";
+            document.write(x);
+        </script>
+        <br><br>
+        <script>
+            // using the charAt()method to pick an individual character within a string using the index 
+            var x = "This Dog and many other dogs want bones because dogs eat bones"
+            document.write(x.charAt(7));
+       </script>
+       <br><br>
+       <script>
+           // output is 's' as index counts from 0, then 1, then -1 from the end of the string
+           var x = "This Dog"
+           document.write(x.charAt(x.length -1));
+      </script>
+      <br><br>
+      <script>
+          // other way to access individual characters without using charAt() method 
+          var x = "This Dog"
+          document.write(x [2]);
+     </script>
+     <script>
+        //  anywhere theres a comma it splits into an array
+         var animals = "Dogs, Cats, Lions, Zebras, Tigers";
+         var myArray = animals.split(", ");
+         console.log(myArray);
+     </script>
+     <script>
+        //  anywhere theres a space it splits into an array
+        // [3] is the index number or position of the substring that needs to be extracted from the array = Zebras
+         var animals = "Dogs Cats Lions Zebras Tigers";
+         var myArray = animals.split(" ");
+         console.log(myArray [3]);
+     </script>
+     <script>
+        // array.length will look at the total length of the string array which is 5 then 5-1=4 (tigers)
+         var animals = "Dogs Cats Lions Zebras Tigers";
+         var myArray = animals.split(" ");
+         console.log(myArray [myArray.length -3]);
+     </script>
+     <br><br>
+     <script>
+        // array.length will look at the total length of the string array which is 5 then 5-1=4 (tigers)
+         var animals = "Dogs Cats Lions Zebras Tigers";
+         var myArray = animals.split(" ");
+        //  for every index item in the array, it must be listed individually. Process must be conducted until list in array is completed
+         for(var i in myArray){
+             document.write("<p>" + myArray[i] + "</p>")
+         }
+     </script>
 
     </body>
 </html>
